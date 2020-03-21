@@ -20,7 +20,7 @@ To run the container and bind the port 1935 to the host machine; run the followi
 
     docker run -p 1935:1935 -p 8080:8080 jasonrivers/nginx-rtmp
 
-###Multiple Streams:
+### Multiple Streams:
 
 You can enable multiple streams on the container by setting RTMP_STREAM_NAMES when launching, This is a comma separated list of names, E.G.
 
@@ -30,7 +30,7 @@ You can enable multiple streams on the container by setting RTMP_STREAM_NAMES wh
     -e RTMP_STREAM_NAMES=live,teststream1,teststream2   \  
     jasonrivers/nginx-rtmp  
 
-###Pushing streams
+### Pushing streams
 
 You can push your main stream out to other RTMP servers, Currently this is limited to only the first stream in RTMP_STREAM_NAMES (default is live) by setting RTMP_PUSH_URLS when launching, This is a comma seperated list of URLS, EG:
 
@@ -41,7 +41,7 @@ You can push your main stream out to other RTMP servers, Currently this is limit
     jasonrivers/nginx-rtmp
 
 
-##OBS Configuration
+## OBS Configuration
 
 Under broadcast settings, set the following parameters:
 
@@ -54,6 +54,6 @@ In your favorite RTMP video player connect to the stream using the URL:
 rtmp://<your server ip>/live/mystream  
 http://<your server ip>/hls/mystream.m3u8
 
-###Tested players
+### Tested players
 VLC
 omxplayer (Raspberry Pi)
